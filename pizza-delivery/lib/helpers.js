@@ -138,7 +138,7 @@ helpers.sendMailgunEmail = function(userEmail, emailSubject, emailMessage, callb
 		// Configure the request payload
 		var payload = {
 			'from' : "Mailgun Sandbox <postmaster@sandboxda10fc3b805a44a8b4293050a1bcb506.mailgun.org>",
-			'to' : "Riaz Ahmed <"+userEmail+">",
+			'to' : "Your Name <"+userEmail+">",
 			'subject' : emailSubject,
 			'text' : emailMessage
 		};
