@@ -12,12 +12,12 @@ Before starting app please do the following:
 ## How interact with API
 This is a pizza delivery API, without GUI.
 
-Start the server: `node index.js`
+* Start the server: `node index.js`
 
 #### Create User
-Method: POST
-URL: localhost:3000/users
-Payload:
+* Method: POST
+* URL: localhost:3000/users
+* Payload:
 ```
 {
 	"firstName" : "firstName",
@@ -42,18 +42,18 @@ Payload:
 ```
 
 #### Get User
-Method: GET
-URL: localhost:3000/users?email=youremail@xyz.com
-headers: key => token , value => tokenYouCreated
+* Method: GET
+* URL: localhost:3000/users?email=youremail@xyz.com
+* headers: key => token , value => tokenYouCreated
 
 
 #### Edit User
-Method: PUT
-URL: localhost:3000/users
-Required: email
-headers: key => token , value => tokenYouCreated
-Optional: firstName, lastName, password (at least one must be specified)
-Payload: 
+* Method: PUT
+* URL: localhost:3000/users
+* Required: email
+* headers: key => token , value => tokenYouCreated
+* Optional: firstName, lastName, password (at least one must be specified)
+* Payload: 
 ```
 {
 	"firstName" : "firstNameEdited",
@@ -62,6 +62,6 @@ Payload:
 ```
 
 #### Delete User
-Method: Delete
-URL: localhost:3000/users?email=youremail@xyz.com
-headers: key => token , value => tokenYouCreated
+* Method: Delete
+* URL: localhost:3000/users?email=youremail@xyz.com
+* headers: key => token , value => tokenYouCreated
