@@ -42,6 +42,7 @@ This is a pizza delivery API, without GUI.
 * **Payload**: 
 ```
 {
+	"email" : "youremail@xyz.com",
 	"firstName" : "firstNameEdited",
 	"lastName" : "lastNameEdited",
 }
@@ -52,6 +53,7 @@ This is a pizza delivery API, without GUI.
 * **URL**: localhost:3000/users?email=youremail@xyz.com
 * **Header**: key => token , value => tokenYouCreated
 
+## Token
 
 #### Create Token
 * **Method**: POST
@@ -63,8 +65,6 @@ This is a pizza delivery API, without GUI.
 	"password" : "thisIsAPassword"
 }
 ```
-
-## Token
 
 #### Get Token
 * **Method**: GET
