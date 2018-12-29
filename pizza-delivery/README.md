@@ -14,6 +14,9 @@ This is a pizza delivery API, without GUI.
 
 * Start the server: `node index.js`
 
+
+## User
+
 #### Create User
 * **Method**: POST
 * **URL**: localhost:3000/users
@@ -30,6 +33,26 @@ This is a pizza delivery API, without GUI.
 }
 ```
 
+#### Edit User
+* **Method**: PUT
+* **URL**: localhost:3000/users
+* **Required**: email
+* **Header**: key => token , value => tokenYouCreated
+* **Optional**: firstName, lastName, password (at least one must be specified)
+* **Payload**: 
+```
+{
+	"firstName" : "firstNameEdited",
+	"lastName" : "lastNameEdited",
+}
+```
+
+#### Delete User
+* **Method**: DELETE
+* **URL**: localhost:3000/users?email=youremail@xyz.com
+* **Header**: key => token , value => tokenYouCreated
+
+
 #### Create Token
 * **Method**: POST
 * **URL**: localhost:3000/tokens
@@ -40,6 +63,8 @@ This is a pizza delivery API, without GUI.
 	"password" : "thisIsAPassword"
 }
 ```
+
+## Token
 
 #### Get Token
 * **Method**: GET
@@ -65,25 +90,7 @@ This is a pizza delivery API, without GUI.
 * **URL**: localhost:3000/users?email=youremail@xyz.com
 * **Header**: key => token , value => tokenYouCreated
 
-
-#### Edit User
-* **Method**: PUT
-* **URL**: localhost:3000/users
-* **Required**: email
-* **Header**: key => token , value => tokenYouCreated
-* **Optional**: firstName, lastName, password (at least one must be specified)
-* **Payload**: 
-```
-{
-	"firstName" : "firstNameEdited",
-	"lastName" : "lastNameEdited",
-}
-```
-
-#### Delete User
-* **Method**: DELETE
-* **URL**: localhost:3000/users?email=youremail@xyz.com
-* **Header**: key => token , value => tokenYouCreated
+## Menu
 
 #### Get Menu Items
 * **Method** : GET
@@ -112,10 +119,14 @@ This is a pizza delivery API, without GUI.
 }
 ```
 
+## Cart
+
 #### View Cart
 * **Method** : GET
 * **URL**: localhost:3000/cart?email=youremail@xyz.com
 * **Header**:  key => token , value => tokenYouCreated
+
+## Checkout
 
 #### Checkout
 * **Method** : POST
