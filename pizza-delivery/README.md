@@ -31,9 +31,9 @@ This is a pizza delivery API, without GUI.
 ```
 
 #### Create Token
-**Method**: POST
-**URL**: localhost:3000/tokens
-**Payload**:
+* **Method**: POST
+* **URL**: localhost:3000/tokens
+* **Payload**:
 ```
 {
 	"email" : "youremail@xyz.com",
@@ -62,6 +62,59 @@ This is a pizza delivery API, without GUI.
 ```
 
 #### Delete User
-* **Method**: Delete
+* **Method**: DELETE
 * **URL**: localhost:3000/users?email=youremail@xyz.com
 * **Header**: key => token , value => tokenYouCreated
+
+
+#### Get Menu Items
+* **Method** : GET
+* **URL**: localhost:3000/menu?email=youremail@xyz.com
+* **Header**:  key => token , value => tokenYouCreated
+
+#### Add Item (1 to 5 items can be inserted)
+* **Method** : POST
+* **URL**: localhost:3000/menu?item=Item1
+* **Header**:  key => token , value => tokenYouCreated
+* **Payload**: 
+```
+{
+	"email" : "youremail@xyz.com",
+}
+```
+
+#### Delete Item
+* **Method** : DELETE
+* **URL**: localhost:3000/menu?item=Item1
+* **Header**:  key => token , value => tokenYouCreated
+* **Payload**: 
+```
+{
+	"email" : "youremail@xyz.com",
+}
+```
+
+#### View Cart
+* **Method** : GET
+* **URL**: localhost:3000/cart?email=youremail@xyz.com
+* **Header**:  key => token , value => tokenYouCreated
+
+#### Checkout
+* **Method** : POST
+* **URL**: localhost:3000/checkout?email=youremail@xyz.com
+* **Header**:  key => token , value => tokenYouCreated
+* **Payload**: 
+```
+{
+	"cardNumber" : "6200000000000005",
+	"expirationMonth" : 10,
+	"expirationYear" : 2019,
+	"securityCode" : 123,
+	"zipCode" : "001234"
+}
+```
+**Please Note:** Only Accepted Cards for testing
+```
+	4242424242424242, 4000056655665556, 5555555555554444, 2223003122003222, 5200828282828210,
+	'6200000000000005, 6200000000000005
+```
