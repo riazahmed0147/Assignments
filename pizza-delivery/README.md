@@ -41,6 +41,25 @@ This is a pizza delivery API, without GUI.
 }
 ```
 
+#### Get Token
+* **Method**: GET
+* **URL**: localhost:3000/tokens?id=tokenYouCreated
+
+#### Edit Token
+* **Method**: PUT
+* **URL**: localhost:3000/tokens
+* **Payload**:
+```
+{
+	"id" : "tokenYouCreated",
+	"extend" : true
+}
+```
+
+#### Delete Token
+* **Method**: DELETE
+* **URL**: localhost:3000/tokens?id=tokenYouCreated
+
 #### Get User
 * **Method**: GET
 * **URL**: localhost:3000/users?email=youremail@xyz.com
@@ -65,7 +84,6 @@ This is a pizza delivery API, without GUI.
 * **Method**: DELETE
 * **URL**: localhost:3000/users?email=youremail@xyz.com
 * **Header**: key => token , value => tokenYouCreated
-
 
 #### Get Menu Items
 * **Method** : GET
