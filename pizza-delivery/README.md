@@ -33,6 +33,11 @@ This is a pizza delivery API, without GUI.
 }
 ```
 
+#### Get User
+* **Method**: GET
+* **URL**: localhost:3000/users?email=youremail@xyz.com
+* **Header**: key => token , value => tokenYouCreated
+
 #### Edit User
 * **Method**: PUT
 * **URL**: localhost:3000/users
