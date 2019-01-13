@@ -1,0 +1,32 @@
+/*
+ * CSS Styles for Application
+ *
+ */
+
+.content {
+	padding: 2rem 0;
+}
+.copyright {
+	padding: 1rem 0;
+	color: white;
+}
+#navbarNav {
+	float: right;
+}
+.formError, .formSuccess {
+	display: none;
+}
+body.loggedIn nav ul li.loggedOut {
+	display: none;
+}
+body.loggedIn nav ul li.loggedIn {
+	display: block;
+}
+nav ul li.loggedIn {
+	display: none;
+}
+@media only screen and (min-width: 768px) {
+	.formWrapper {
+		padding: 0 8rem;
+	}
+}

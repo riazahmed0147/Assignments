@@ -1,0 +1,29 @@
+<div class="jumbotron text-center">
+	<h1>Choose your pizza</h1>
+	<h2>Select pizza from the list</h2>
+</div>
+
+<div class="formWrapper">
+  <form id="addToCart" action="/api/menu" method="POST">
+    <div class="formError alert alert-danger" role="alert"></div>
+    <div class="formSuccess alert alert-success" role="alert">Pizza added in the cart</div>    
+    <input class="hiddenEmailInput" type="hidden" name="email" />    
+    <div class="inputWrapper mt-2">
+      <div class="inputLabel">Select Pizza (Each pizza cost 50 Rupees)</div>
+      <select class="displayMenuItems form-control" id="menuItems" name="item">       
+        <option value="Item1">Chicken Supreme Pizza</option>
+        <option value="Item2">Cheese Lover Pizza</option>
+        <option value="Item3">Chicken Tikka Pizza</option>
+        <option value="Item4">Chichen Fajita Pizza</option>
+        <option value="Item5">Euro Pizza</option>
+      </select>
+    </div>   
+    <div class="inputWrapper ctaWrapper mt-3">
+      <button type="submit" class="btn btn-lg btn-success">Add to Cart</button>
+    </div>
+  </form>
+
+  <div class="mt-3 text-right">
+    <a href="/cart/all" class="btn btn-lg btn-primary">Show Cart</a>
+  </div>
+</div>
