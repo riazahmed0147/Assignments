@@ -1,0 +1,17 @@
+{
+  "name": "pizza-delivery-web",
+  "version": "1.0.0",
+  "description": "Online pizza order web app with payment gateway implemantation and email service",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node" : "8.9.3"
+  },
+  "author": "Riaz Ahmed",
+  "license": "ISC"
+}
