@@ -6,8 +6,8 @@
 
 // Dependencies
 const server = require('./lib/server');
-var cluster = require('cluster');
-var os = require('os');
+const cluster = require('cluster');
+const os = require('os');
 
 // Declar the app
 const app = {};
@@ -19,7 +19,7 @@ app.init = (callback)  => {
         // Start all process on the master thread
 
         // Fork the process
-        for(var i = 0; i < os.cpus().length; i++) {
+        for(let i = 0; i < os.cpus().length; i++) {
             cluster.fork();
         }
 
